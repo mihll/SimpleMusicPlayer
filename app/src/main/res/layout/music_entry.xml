@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        app:cardCornerRadius="3dp"
+        app:cardBackgroundColor="@color/row_background"
+        app:cardElevation="1dp"
+        android:id="@+id/photoCV">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="@dimen/cover_width"
+                android:layout_height="@dimen/cover_height"
+                tools:srcCompat="@tools:sample/avatars[3]"
+                android:id="@+id/coverIV"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="parent"
+                android:contentDescription="@string/record_coverIV"
+                android:layout_marginTop="@dimen/cover_margin"
+                android:layout_marginBottom="@dimen/cover_margin"
+                app:layout_constraintVertical_bias="0.0" app:layout_constraintStart_toStartOf="@id/guideline"
+                app:layout_constraintHorizontal_bias="0.0" android:layout_marginStart="5dp"/>
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content" android:id="@+id/guideline"
+                                                    android:orientation="vertical"
+                                                    app:layout_constraintGuide_percent="0.77"/>
+        <TextView
+                android:text="@string/record_titleTV"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="wrap_content"
+                android:id="@+id/titleTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guideline"
+                android:layout_marginTop="@dimen/text_marginTop"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/title_text_size"
+                android:gravity="center_vertical"
+                android:layout_marginEnd="@dimen/text_marginEnd" android:textColor="#FFFFFFFF"
+                android:layout_marginStart="5dp"/>
+        <TextView
+                android:text="@string/record_artistTV"
+                android:layout_width="@dimen/text_width"
+                android:layout_height="wrap_content"
+                android:id="@+id/artistTV"
+                android:layout_marginBottom="@dimen/text_marginTop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/titleTV"
+                android:textAlignment="center"
+                android:textSize="@dimen/artist_text_size"
+                android:layout_marginEnd="@dimen/text_marginEnd" android:textColor="#FFFFFF"
+                android:layout_marginStart="5dp"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
